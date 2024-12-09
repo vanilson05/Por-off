@@ -478,6 +478,9 @@ img {
   background-color: var(--first-color);
   border-radius: 50%;
   position: absolute;
+  top: -1rem;
+  right: -1rem;
+  transition: transform .4s;
 }
 
 
