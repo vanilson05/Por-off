@@ -477,11 +477,13 @@ img {
   height: 3rem;
   background-color: var(--first-color);
   border-radius: 50%;
-  position: absolute;
+  white-space: nowrap;
   top: -1rem;
   right: -1rem;
   transition: transform .4s;
+  position: absolute;
 }
+
 
 
 /*=============== EXPERIENCE ===============*/
