@@ -303,6 +303,11 @@ img {
 .about__link:hover{
   background-color: var(--first-color);
   color: var(--white-color);
+  box-shadow: 
+  0 0 1rem 0.5rem rgba(173, 216, 230, 0.6), /* Azul claro */
+  0 0 2rem 1rem rgba(135, 206, 250, 0.5),   /* Azul céu */
+  0 0 3rem 2rem rgba(70, 130, 180, 0.3);    /* Azul médio */
+transition: box-shadow 0.6s ease, transform 0.6s ease;
 }
 
 .about__image{
@@ -468,22 +473,37 @@ img {
 .services__icon i{
   font-size: 2.5rem;
   position: relative;
-  z-index: var(--z-tooltip);
-  
+  z-index: var(--z-tooltip)
 }
 
-.services__circle {
+.services__circle{
   width: 3rem;
   height: 3rem;
   background-color: var(--first-color);
   border-radius: 50%;
-  white-space: nowrap;
+  position: absolute;
   top: -1rem;
   right: -1rem;
   transition: transform .4s;
-  position: absolute;
 }
 
+.services__name{
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+
+.services__description{
+  color: var(--text-color)
+}
+
+.services__card:hover .services__circle{
+  transform: translate(.25rem, -.25rem);
+  box-shadow: 
+  0 0 1rem 0.5rem rgba(173, 216, 230, 0.6), /* Azul claro */
+  0 0 2rem 1rem rgba(135, 206, 250, 0.5),   /* Azul céu */
+  0 0 3rem 2rem rgba(70, 130, 180, 0.3);    /* Azul médio */
+transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
 
 
 /*=============== EXPERIENCE ===============*/
