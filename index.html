@@ -380,7 +380,22 @@
 
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
-            
+            <h2 class="section__title">CONTACT ME</h2>
+
+            <div class="contact__container content grid">
+               <form action="" class="contact__form grid" id="contact-form">
+                  <div class="contact__group grid">
+                     <input type="text" name="user_name" placeholder="Nome" required class="contact__input">
+                     <input type="email" name="user_email" placeholder="Gmail" required class="contact__input">
+                  </div>
+
+                  <textarea name="unser_message" placeholder="Mensagem" id="" class="contact__input contact__area"></textarea>
+
+                  <button type="submit" class="button contact__button">Enviar</button>
+
+                  <p class="contact__message" id="contact__message">Mensagem</p>
+               </form>
+            </div>
          </section>
       </main>
 
