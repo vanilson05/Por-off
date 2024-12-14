@@ -562,6 +562,10 @@ transition: box-shadow 0.6s ease, transform 0.6s ease;
   color: var(--text-color);
 }
 
+.contact__input::autofill{
+  transition: background-color 6000s, color 600s;
+}
+
 /*=============== FOOTER ===============*/
 
 
