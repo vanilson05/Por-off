@@ -566,6 +566,24 @@ transition: box-shadow 0.6s ease, transform 0.6s ease;
   transition: background-color 6000s, color 600s;
 }
 
+.contact__area{
+  height: 10rem;
+  border-radius: 1.5rem;
+  resize: none;
+}
+
+.contact__button{
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.contact__message{
+  position: absolute;
+  left: 0;
+  bottom: 4.5rem;
+  font-size: var(--smaller-font-size);
+}
+
 /*=============== FOOTER ===============*/
 
 
