@@ -6,7 +6,7 @@ const sendEmail = (e) =>{
     e.preventDefault()
 
     //serviceID - templeteID - #form - publickey
-    emailjs.sendForm('service_g4tj7rq','template_k93vfhn','#contact-form','J6ly-p_FWOUul1vwK')
+    emailjs.sendForm('service_g4tj7rq','template_k93vfhn','#contactform','J6ly-p_FWOUul1vwK')
 
     .then(() =>{
         //show sent message
@@ -14,7 +14,7 @@ const sendEmail = (e) =>{
 
         // remove message after five seconds
         setTimeout(() => {
-            contactMessage.textContent = '';
+            contactmessage.textContent = '';
         }, 5000);
 
         //clear input fields
