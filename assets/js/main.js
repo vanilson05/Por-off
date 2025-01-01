@@ -15,11 +15,12 @@ const sendEmail = (e) =>{
 
         // remove message after five seconds
         setTimeout(() =>{
-            contactmessage.textContent = '';
+            contactmessage.textContent = ''
         }, 5000)
 
         //clear input fields
         contactForm.reset()
+   
     })
 }
 
