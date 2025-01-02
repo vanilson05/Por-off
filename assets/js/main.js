@@ -2,29 +2,32 @@
 const contactForm = document.getElementById('contact-form'),
       contactMessage = document.getElementById('contact__message')
 
-const sendEmail = (e) =>{
-    
-    e.preventDefault()
+const sendEmail = (e) => {
+    e.preventDefault();
 
-    //serviceID - templeteID - #form - publickey
-    emailjs.sendForm('service_g4tj7rq','template_9dpnnu9','#contact-form','f7Lsrvq71fVoHn_oqvuPQ')
+    //serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_g4tj7rq', 'template_9dpnnu9', '#contact-form', 'f7Lsrvq71fVoHn_oqvuPQ')
+        .then(() => {
+            // Show sent message
+            contactMessage.textContent = 'Enviado com sucesso ✅';
 
-    .then(() =>{
-        //show sent message
-        contactMessage.textContent = 'Enviado com sucesso ✅'
+            // Remove message after five seconds
+            setTimeout(() => {
+                contactMessage.textContent = ''; // Corrigido: contactmessage para contactMessage
+            }, 5000);
 
-        // remove message after five seconds
-        setTimeout(() =>{
-            contactmessage.textContent = ''
-        }, 5000)
+            // Clear input fields
+            contactForm.reset();
+        })
+        .catch(() => { // Corrigido: Colocado o .catch corretamente fora do .then
+            // Show error message
+            contactMessage.textContent = 'Message not sent (service error) ❌';
+        });
+};
 
-        //clear input fields
-        contactForm.reset()
-   
-    })
-}
+// Adiciona o evento 'submit' no formulário
+contactForm.addEventListener('submit', sendEmail);
 
-contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
