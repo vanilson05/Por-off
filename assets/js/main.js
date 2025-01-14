@@ -1,11 +1,11 @@
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact__message')
+const contactForm = document.getElementById('contact-form');
+const contactMessage = document.getElementById('contact__message');
 
 const sendEmail = (e) => {
     e.preventDefault();
 
-    //serviceID - templateID - #form - publicKey
+    // serviceID - templateID - #form - publicKey
     emailjs.sendForm('service_g4tj7rq', 'template_9dpnnu9', '#contact-form', 'f7Lsrvq71fVoHn_oqvuPQ')
         .then(() => {
             // Show sent message
@@ -13,13 +13,13 @@ const sendEmail = (e) => {
 
             // Remove message after five seconds
             setTimeout(() => {
-                contactMessage.textContent = ''; // Corrigido: contactmessage para contactMessage
+                contactMessage.textContent = '';
             }, 5000);
 
             // Clear input fields
             contactForm.reset();
         })
-        .catch(() => { // Corrigido: Colocado o .catch corretamente fora do .then
+        .catch(() => {
             // Show error message
             contactMessage.textContent = 'Message not sent (service error) ❌';
         });
@@ -27,7 +27,6 @@ const sendEmail = (e) => {
 
 // Adiciona o evento 'submit' no formulário
 contactForm.addEventListener('submit', sendEmail);
-
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
