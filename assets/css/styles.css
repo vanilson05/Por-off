@@ -585,7 +585,25 @@ transition: box-shadow 0.6s ease, transform 0.6s ease;
 }
 
 /*=============== FOOTER ===============*/
+.footer{
+  padding: 2rem 8rem;
+}
 
+.footer__container{
+  row-gap: var(--white-color);
+}
+
+.footer__logo{
+  color: var(--white-color);
+  font: var(--font-regular) var(--biggest-font-size) var(--second-font);
+  justify-self: center;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
 
 /*=============== SCROLL BAR ===============*/
 
