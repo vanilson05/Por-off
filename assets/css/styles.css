@@ -645,7 +645,36 @@ transition: box-shadow 0.6s ease, transform 0.6s ease;
   transition: box-shadow 0.6s ease, transform 0.6s ease;
 }
 
+.footer__copy{
+  display: block;
+  margin-top: 4.5rem;
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  background-color: hsl(0, 0%, 20%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: hsl(0, 0%, 30%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(0, 0%, 40%);
+  border-radius: .5rem;
+  box-shadow: 
+  0 0 1rem 0.5rem rgba(173, 216, 230, 0.6), /* Azul claro */
+  0 0 2rem 1rem rgba(135, 206, 250, 0.5),   /* Azul céu */
+  0 0 3rem 2rem rgba(70, 130, 180, 0.3);    /* Azul médio */
+  transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
+
 
 
 /*=============== SCROLL UP ===============*/
