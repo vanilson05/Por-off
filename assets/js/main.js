@@ -30,7 +30,14 @@ contactForm.addEventListener('submit', sendEmail);
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
+ const scrollup = () =>{
+    const scrollup = document.getElementById('acroll-up')
+  // when the scroll is heither than 350 viewport height,add the show-scroll class to the a tag with the scroll-top class
+  this.scrolly >= 350 ? scrollup.classList.add('show-scroll')
+                : scrollup.classList.remove('show-scroll')
+ }
 
+ window.addEventListener('scroll', scrollup)
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 
