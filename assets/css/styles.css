@@ -378,6 +378,12 @@ transition: box-shadow 0.6s ease, transform 0.6s ease;
 
 .button:hover{
   background-color: var(--first-color-alt);
+  box-shadow: 
+  0 0 1rem 0.5rem rgba(173, 216, 230, 0.6), /* Azul claro */
+  0 0 2rem 1rem rgba(135, 206, 250, 0.5),   /* Azul céu */
+  0 0 3rem 2rem rgba(70, 130, 180, 0.3);    /* Azul médio */
+  transition: box-shadow 0.6s ease, transform 0.6s ease;
+  
 }
 
 /*=============== PROJECTS ===============*/
