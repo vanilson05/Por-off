@@ -175,9 +175,6 @@ img {
 }
 
 /* Active link */
-.active-link {
-  background-color: var(--first-color);
-}
 
 /*=============== HOME ===============*/
 /*===== PERFIL =====*/
@@ -714,9 +711,33 @@ transition: box-shadow 0.6s ease, transform 0.6s ease;
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-
+@media screen and (max-width: 320px){
+  .container{
+    margin-inline: 1rem;
+  }
+  .nav{
+    padding: 1rem
+  }
+}
 
 /* For medium devices */
+@media screen and (min-width: 540px){
+  .nav{
+    width: max-content;
+  }
+  .nav__list{
+    column-gap: 1.5rem;
+  }
+
+  .home__container,
+  .projects__container,
+  .services__container,
+  .experience__container,
+  .contact__container{
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
+}
 
 
 /* For large devices */
