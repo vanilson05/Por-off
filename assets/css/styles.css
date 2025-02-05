@@ -736,6 +736,7 @@ transition: box-shadow 0.6s ease, transform 0.6s ease;
   .contact__container{
     grid-template-columns: 380px;
     justify-content: center;
+    align-items: center;
   }
 }
 
